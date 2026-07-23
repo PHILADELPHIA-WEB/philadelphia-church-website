@@ -28,6 +28,7 @@ export default function JoinUs() {
     churchDetails: '',
     comments: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -42,11 +43,37 @@ export default function JoinUs() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Connect to Azure Forms here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your interest! We\'ll be in touch soon.');
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/submitJoinForm', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error('Submission failed');
+
+      alert('Thank you for your interest! We\'ll be in touch soon.');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        interestAreas: [],
+        ...YES_NO_DEFAULTS,
+        baptismYear: '',
+        churchDetails: '',
+        comments: '',
+      });
+    } catch (err) {
+      console.error(err);
+      alert('Sorry, something went wrong submitting the form. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -206,8 +233,8 @@ export default function JoinUs() {
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
               />
 
-              <Button type="submit" fullWidth>
-                Submit
+              <Button type="submit" fullWidth disabled={isSubmitting}>
+                {isSubmitting ? 'Submitting...' : 'Submit'}
               </Button>
             </form>
           </div>

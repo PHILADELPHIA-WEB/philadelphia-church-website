@@ -18,5 +18,8 @@ yarn-error.log*
 .next/
 out/
 
+# Azure Functions local secrets - never commit
+api/local.settings.json
+
 # Too large for GitHub (>100MB) - kept local only, unused in the app
 public/Videos/Background2 (2).mp4
