@@ -22,10 +22,12 @@ export default {
           700: '#334155',
         },
         accent: '#fb7185',
+        cream: '#f7f0e6',
+        surface: '#f3ebdd',
       },
       fontFamily: {
-        sans: ['Montserrat', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
-        serif: ['Merriweather', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+        serif: ['Fraunces', 'Georgia', 'serif'],
       },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-in',

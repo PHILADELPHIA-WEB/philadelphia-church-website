@@ -51,7 +51,7 @@ export default function Hero({
         </>
       )}
       <div className="container mx-auto px-4 z-10">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">{title}</h1>
+        <h1 className="text-4xl md:text-6xl font-bold font-serif mb-4 animate-fade-in">{title}</h1>
         {subtitle && (
           <p className="text-lg md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto animate-fade-in">
             {subtitle}
@@ -70,7 +70,7 @@ export default function Hero({
             {secondaryCTA && (
               <Link
                 to={secondaryCTA.href}
-                className="btn-outline text-white border-white hover:bg-white/10"
+                className="btn-outline-white"
               >
                 {secondaryCTA.text}
               </Link>

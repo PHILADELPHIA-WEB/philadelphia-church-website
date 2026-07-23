@@ -60,7 +60,7 @@ export default function Events() {
         </div>
       </section>
 
-      <section className="section-container bg-gray-50">
+      <section className="section-container bg-surface">
         <div className="max-w-4xl mx-auto">
           <h2 className="section-title">Special Events Coming Up</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

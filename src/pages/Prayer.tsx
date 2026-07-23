@@ -55,7 +55,7 @@ export default function Prayer() {
             </p>
           </div>
 
-          <div className="bg-gray-50 p-8 rounded-lg">
+          <div className="bg-surface p-8 rounded-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input

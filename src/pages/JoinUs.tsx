@@ -3,7 +3,6 @@ import Hero from '@components/Hero/Hero';
 import { Card, Button } from '@components/Common/Common';
 
 const YES_NO_DEFAULTS = {
-  wantsMembership: '',
   partOfFamily: '',
   receivedSalvation: '',
   immersedBaptism: '',
@@ -11,7 +10,6 @@ const YES_NO_DEFAULTS = {
 };
 
 const YES_NO_QUESTIONS: { name: keyof typeof YES_NO_DEFAULTS; label: string }[] = [
-  { name: 'wantsMembership', label: 'Would you like to become a member of Philadelphia Church?' },
   { name: 'partOfFamily', label: 'Would you like to be part of the Philadelphia Church family?' },
   { name: 'receivedSalvation', label: 'Have you received salvation?' },
   { name: 'immersedBaptism', label: 'Have you been baptized by immersion?' },
@@ -216,7 +214,7 @@ export default function JoinUs() {
         </div>
       </section>
 
-      <section className="section-container bg-gray-50">
+      <section className="section-container bg-surface">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="section-title">First Time Visitor?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">

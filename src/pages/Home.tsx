@@ -22,7 +22,7 @@ export default function Home() {
       />
 
       {/* Ways to Connect Section */}
-      <section className="section-container bg-gray-50">
+      <section className="section-container bg-surface">
         <h2 className="section-title">Find the Right Way to Connect</h2>
         <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
           No matter where you are, become part of all God is doing at Philadelphia Church.
@@ -66,7 +66,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="section-container bg-gray-50">
+      <section className="section-container bg-surface">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-4 text-secondary-700">About Our Church</h2>
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* Latest News Section */}
-      <section className="section-container bg-gray-50">
+      <section className="section-container bg-surface">
         <h2 className="section-title">Latest News</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card
@@ -150,7 +150,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary">Get Involved</Button>
-            <Link to="/contact" className="btn-outline text-white border-white hover:bg-white/10">
+            <Link to="/contact" className="btn-outline-white">
               Contact Us
             </Link>
           </div>

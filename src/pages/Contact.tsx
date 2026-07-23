@@ -3,6 +3,8 @@ import Hero from '@components/Hero/Hero';
 import { Button } from '@components/Common/Common';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
+const CHURCH_ADDRESS = 'Community Room 2, 104 Shipwright Parade, Werribee VIC 3030, Australia';
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -41,6 +43,14 @@ export default function Contact() {
                     <p className="text-gray-600">Community Room 2</p>
                     <p className="text-gray-600">104 Shipwright Parade</p>
                     <p className="text-gray-600">Werribee VIC 3030, Australia</p>
+                    <a
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(CHURCH_ADDRESS)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-600 font-semibold hover:text-primary-700 inline-block mt-1"
+                    >
+                      Get Directions →
+                    </a>
                   </div>
                 </div>
 
@@ -73,7 +83,7 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gray-50 p-8 rounded-lg">
+            <div className="bg-surface p-8 rounded-lg">
               <h2 className="text-2xl font-bold mb-6 text-secondary-700">Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
@@ -137,9 +147,16 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Map Placeholder */}
-          <div className="bg-gray-300 h-96 rounded-lg flex items-center justify-center">
-            <span className="text-gray-600">Map Integration Coming Soon</span>
+          {/* Map */}
+          <div className="h-96 rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              title="Philadelphia Church location"
+              src={`https://www.google.com/maps?q=${encodeURIComponent(CHURCH_ADDRESS)}&output=embed`}
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
         </div>
       </section>

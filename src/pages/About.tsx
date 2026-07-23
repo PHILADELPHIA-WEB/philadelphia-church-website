@@ -72,18 +72,18 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section-container bg-gray-50">
+      <section className="section-container bg-surface">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-secondary-700">Leadership</h2>
           <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
             Our church is led by dedicated pastors who are passionate about sharing God's Word and shepherding our community.
           </p>
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col items-center text-center">
-            <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden ring-4 ring-primary-100 shadow-md mb-6">
+            <div className="w-64 md:w-80 rounded-2xl overflow-hidden ring-4 ring-primary-100 shadow-md mb-6">
               <img
                 src="/images/pastors-team.jpg"
                 alt="Pastor Arun Abraham and Pastor Lovelyn Arun"
-                className="w-full h-full object-cover"
+                className="w-full h-auto"
               />
             </div>
             <h3 className="text-3xl font-bold text-secondary-700 mb-2">Pastor Arun Abraham & Pastor Lovelyn Arun</h3>

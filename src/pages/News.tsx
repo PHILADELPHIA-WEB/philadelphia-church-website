@@ -50,7 +50,7 @@ export default function News() {
         </div>
       </section>
 
-      <section className="section-container bg-gray-50">
+      <section className="section-container bg-surface">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="section-title">Stay Updated</h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">

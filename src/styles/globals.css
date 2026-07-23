@@ -4,7 +4,7 @@
 
 /* Global Styles */
 body {
-  @apply font-sans text-gray-900;
+  @apply font-sans text-gray-900 bg-cream;
 }
 
 html {
@@ -14,15 +14,19 @@ html {
 /* Custom component styles */
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-secondary-700 bg-primary-600 text-white font-bold uppercase tracking-wide text-sm shadow-[4px_4px_0_0_theme(colors.secondary.700)] transition-all duration-150 hover:bg-primary-700 hover:shadow-[2px_2px_0_0_theme(colors.secondary.700)] hover:translate-x-0.5 hover:translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-gray-200 text-gray-900 rounded-lg font-semibold hover:bg-gray-300 transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-secondary-700 bg-white text-secondary-700 font-bold uppercase tracking-wide text-sm shadow-[4px_4px_0_0_theme(colors.secondary.700)] transition-all duration-150 hover:bg-gray-100 hover:shadow-[2px_2px_0_0_theme(colors.secondary.700)] hover:translate-x-0.5 hover:translate-y-0.5;
   }
 
   .btn-outline {
-    @apply px-6 py-3 border-2 border-primary-600 text-primary-600 rounded-lg font-semibold hover:bg-primary-50 transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-secondary-700 bg-transparent text-secondary-700 font-bold uppercase tracking-wide text-sm shadow-[4px_4px_0_0_theme(colors.secondary.700)] transition-all duration-150 hover:bg-primary-50 hover:shadow-[2px_2px_0_0_theme(colors.secondary.700)] hover:translate-x-0.5 hover:translate-y-0.5;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-white bg-transparent text-white font-bold uppercase tracking-wide text-sm shadow-[4px_4px_0_0_rgba(255,255,255,0.5)] transition-all duration-150 hover:bg-white/10 hover:shadow-[2px_2px_0_0_rgba(255,255,255,0.5)] hover:translate-x-0.5 hover:translate-y-0.5;
   }
 
   .section-container {
@@ -34,7 +38,7 @@ html {
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center mb-4 text-secondary-700;
+    @apply text-3xl md:text-4xl font-bold font-serif text-center mb-4 text-secondary-700;
   }
 
   .section-subtitle {

@@ -18,5 +18,5 @@ yarn-error.log*
 .next/
 out/
 
-# Too large for GitHub (>100MB) - kept local only
-public/Videos/Background.mp4
+# Too large for GitHub (>100MB) - kept local only, unused in the app
+public/Videos/Background2 (2).mp4

@@ -57,7 +57,7 @@ export default function Sermons() {
         </div>
       </section>
 
-      <section className="section-container bg-gray-50">
+      <section className="section-container bg-surface">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="section-title">Bible Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

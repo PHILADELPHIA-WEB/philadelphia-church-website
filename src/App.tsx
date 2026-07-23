@@ -11,6 +11,7 @@ import Giving from '@pages/Giving';
 import JoinUs from '@pages/JoinUs';
 import Contact from '@pages/Contact';
 import Prayer from '@pages/Prayer';
+import ArticlesOfFaith from '@pages/ArticlesOfFaith';
 import NotFound from '@pages/NotFound';
 import '@styles/globals.css';
 
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/join" element={<JoinUs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/prayer" element={<Prayer />} />
+            <Route path="/articles-of-faith" element={<ArticlesOfFaith />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
