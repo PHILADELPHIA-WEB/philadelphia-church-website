@@ -7,23 +7,31 @@ export default function Events() {
     {
       title: 'Sunday Worship Service',
       date: 'Every Sunday',
-      time: '10:00 AM',
-      location: 'Main Sanctuary',
+      time: '10:00 AM - 12:00 PM',
+      location: 'Community Room 2, 104 Shipwright Parade, Werribee VIC 3030, Australia',
       description: 'Join us for our weekly worship service.',
     },
     {
-      title: 'Midweek Bible Study',
+      title: 'Philadelphia Prayer Night',
+      date: 'Every Friday',
+      time: '6:30 PM - 8:00 PM',
+      location: "Held in a believer's home (contact us for details)",
+      description: 'A time of united prayer together as a church family.',
+    },
+    {
+      title: 'Foundations Midweek (Bible Study)',
       date: 'Wednesdays',
       time: '7:00 PM',
-      location: 'Fellowship Hall',
+      location: "Google Meet & Pastor's House, 17 Matheson Avenue, Wyndham Vale VIC 3024",
       description: 'Study Scripture and grow together in faith.',
     },
     {
-      title: 'Youth Group Meeting',
-      date: 'Fridays',
-      time: '6:30 PM',
-      location: 'Youth Center',
-      description: 'Fun games, fellowship, and spiritual growth for teens.',
+      title: 'Morning Presence',
+      date: 'Monday - Thursday',
+      time: '6:00 AM - 7:00 AM',
+      location: 'Google Meet',
+      description: 'Start your day with prayer, joining online from wherever you are.',
+      link: 'https://meet.google.com/ugj-hxqc-oep',
     },
   ];
 
@@ -53,7 +61,11 @@ export default function Events() {
                   </div>
                 </div>
                 <p className="text-gray-600 mb-4">{event.description}</p>
-                <button className="btn-primary">Learn More</button>
+                {event.link && (
+                  <a href={event.link} target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
+                    Join Google Meet
+                  </a>
+                )}
               </div>
             ))}
           </div>
