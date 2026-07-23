@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '@components/Hero/Hero';
 import { Button } from '@components/Common/Common';
 import { Mail, Phone, MapPin } from 'lucide-react';
@@ -74,11 +75,15 @@ export default function Contact() {
               <div className="mt-8">
                 <h3 className="font-bold text-secondary-700 mb-4">Service Times</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li><strong>Sunday Worship:</strong> 10:00 AM - 11:30 AM</li>
-                    <li><strong>Location:</strong> Community Room 2, 104 Shipwright Parade, Werribee VIC 3030</li>
-                    <li><strong>Midweek Study:</strong> Wednesdays 7:00 PM</li>
-                    <li><strong>Youth Group:</strong> Fridays 6:30 PM</li>
-                  </ul>
+                  <li><strong>Sunday Worship:</strong> 10:00 AM - 12:00 PM</li>
+                  <li><strong>Location:</strong> Community Room 2, 104 Shipwright Parade, Werribee VIC 3030</li>
+                  <li><strong>Philadelphia Prayer Night:</strong> Fridays 6:30 PM - 8:00 PM</li>
+                  <li><strong>Foundations Midweek (Bible Study):</strong> Wednesdays 7:00 PM</li>
+                  <li><strong>Morning Presence:</strong> Mon - Thu, 6:00 AM - 7:00 AM (Google Meet)</li>
+                </ul>
+                <Link to="/events" className="text-primary-600 font-semibold hover:text-primary-700 inline-block mt-3">
+                  See Events for more information &amp; directions &rarr;
+                </Link>
                 </div>
             </div>
 

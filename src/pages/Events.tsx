@@ -10,6 +10,9 @@ export default function Events() {
       time: '10:00 AM - 12:00 PM',
       location: 'Community Room 2, 104 Shipwright Parade, Werribee VIC 3030, Australia',
       description: 'Join us for our weekly worship service.',
+      mapLink:
+        'https://www.google.com/maps/dir/?api=1&destination=' +
+        encodeURIComponent('Community Room 2, 104 Shipwright Parade, Werribee VIC 3030, Australia'),
     },
     {
       title: 'Philadelphia Prayer Night',
@@ -24,6 +27,9 @@ export default function Events() {
       time: '7:00 PM',
       location: "Google Meet & Pastor's House, 17 Matheson Avenue, Wyndham Vale VIC 3024",
       description: 'Study Scripture and grow together in faith.',
+      mapLink:
+        'https://www.google.com/maps/dir/?api=1&destination=' +
+        encodeURIComponent('17 Matheson Avenue, Wyndham Vale VIC 3024, Australia'),
     },
     {
       title: 'Morning Presence',
@@ -61,11 +67,18 @@ export default function Events() {
                   </div>
                 </div>
                 <p className="text-gray-600 mb-4">{event.description}</p>
-                {event.link && (
-                  <a href={event.link} target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
-                    Join Google Meet
-                  </a>
-                )}
+                <div className="flex flex-wrap gap-3">
+                  {event.link && (
+                    <a href={event.link} target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
+                      Join Google Meet
+                    </a>
+                  )}
+                  {event.mapLink && (
+                    <a href={event.mapLink} target="_blank" rel="noopener noreferrer" className="btn-outline inline-block">
+                      Get Directions
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
