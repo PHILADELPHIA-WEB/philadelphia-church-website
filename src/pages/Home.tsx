@@ -36,8 +36,24 @@ export default function Home() {
         }}
       />
 
-      {/* Ways to Connect Section */}
+      {/* Ministries Section */}
       <section className="section-container bg-surface">
+        <h2 className="section-title">A Place for You and Your Family</h2>
+        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
+          From our youngest members to our most seasoned believers, there's a ministry here for every stage of faith.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card icon={<Baby size={32} />} title="Children's Ministry" description="Age-appropriate programs for kids 0-12 during the main service." />
+          <Card icon={<Users size={32} />} title="Youth Group" description="Fun, engaging programs helping teens 13-18 grow in faith and friendship." />
+          <Card icon={<BookOpen size={32} />} title="Bible Studies & Small Groups" description="Weekly gatherings for deeper study, discussion, and fellowship." />
+          <Card icon={<Heart size={32} />} title="Prayer Ministry" description="Dedicated intercessors ready to pray with you and for you." />
+          <Card icon={<HeartHandshake size={32} />} title="Women's Ministry" description="A community for women to grow together in faith and friendship." />
+          <Card icon={<Gift size={32} />} title="Volunteering & Serving" description="Use your gifts to serve our church family and wider community." />
+        </div>
+      </section>
+
+      {/* Ways to Connect Section */}
+      <section className="section-container">
         <h2 className="section-title">Find the Right Way to Connect</h2>
         <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
           No matter where you are, become part of all God is doing at Philadelphia Church.
@@ -61,22 +77,6 @@ export default function Home() {
             description="Grow deeper with our Midweek Bible Study on Wednesdays 7 PM and Youth Group Fridays 6:30 PM."
             cta={{ text: 'Learn more', href: '/services' }}
           />
-        </div>
-      </section>
-
-      {/* Ministries Section */}
-      <section className="section-container">
-        <h2 className="section-title">A Place for You and Your Family</h2>
-        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
-          From our youngest members to our most seasoned believers, there's a ministry here for every stage of faith.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card icon={<Baby size={32} />} title="Children's Ministry" description="Age-appropriate programs for kids 0-12 during the main service." />
-          <Card icon={<Users size={32} />} title="Youth Group" description="Fun, engaging programs helping teens 13-18 grow in faith and friendship." />
-          <Card icon={<BookOpen size={32} />} title="Bible Studies & Small Groups" description="Weekly gatherings for deeper study, discussion, and fellowship." />
-          <Card icon={<Heart size={32} />} title="Prayer Ministry" description="Dedicated intercessors ready to pray with you and for you." />
-          <Card icon={<HeartHandshake size={32} />} title="Women's Ministry" description="A community for women to grow together in faith and friendship." />
-          <Card icon={<Gift size={32} />} title="Volunteering & Serving" description="Use your gifts to serve our church family and wider community." />
         </div>
       </section>
 
