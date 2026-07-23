@@ -13,7 +13,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div className="border-l-4 border-primary-600 pl-6">
               <h3 className="text-2xl font-bold mb-2">Sunday Morning Worship</h3>
-              <p className="text-gray-600 mb-2"><strong>Time:</strong> 10:00 AM - 11:30 AM</p>
+              <p className="text-gray-600 mb-2"><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
               <p className="text-gray-600 mb-4">
                 Join us for inspiring worship, dynamic preaching, and meaningful connection with our church community.
               </p>
@@ -36,8 +36,8 @@ export default function Services() {
             </div>
 
             <div className="border-l-4 border-primary-600 pl-6">
-              <h3 className="text-2xl font-bold mb-2">Bible Studies</h3>
-              <p className="text-gray-600 mb-2"><strong>Frequency:</strong> Weekly</p>
+              <h3 className="text-2xl font-bold mb-2">Foundations Midweek</h3>
+              <p className="text-gray-600 mb-2"><strong>Time:</strong> Wednesdays 7:00 PM</p>
               <p className="text-gray-600 mb-4">
                 Deep dives into Scripture with opportunities for discussion and reflection.
               </p>

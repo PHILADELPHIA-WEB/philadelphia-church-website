@@ -10,9 +10,13 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-secondary-700">Our Story</h2>
           <p className="text-gray-600 mb-4">
-            Philadelphia Church was founded with a vision to create a welcoming community where people could encounter
-            God, grow in faith, and serve others with love and purpose. For years, our congregation has been committed
-            to these core values.
+            Philadelphia Church was founded in January 2025 and has been operating independently since 6 April 2025.
+            The church is inspired by the message in Revelation 3:8 and is actively engaged in regular worship
+            services, evangelism, pastoral care, community support, and teaching ministries.
+          </p>
+          <p className="text-gray-600 mb-4 italic">
+            Revelation 3:8 - "I know your works. See, I have set before you an open door, and no one can shut it;
+            for you have a little strength, have kept My word, and have not denied My name."
           </p>
 
           <h2 className="text-3xl font-bold mb-6 mt-8 text-secondary-700">Our Vision</h2>

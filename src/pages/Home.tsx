@@ -2,7 +2,19 @@ import { Link } from 'react-router-dom';
 import Hero from '@components/Hero/Hero';
 import { Card, Button } from '@components/Common/Common';
 import { sermons } from '@/data/sermons';
-import { MapPin, Video, Users, Baby, BookOpen, HeartHandshake, Gift, Heart } from 'lucide-react';
+import {
+  MapPin,
+  Video,
+  Users,
+  Baby,
+  BookOpen,
+  HeartHandshake,
+  Gift,
+  Heart,
+  Facebook,
+  Instagram,
+  Youtube,
+} from 'lucide-react';
 
 export default function Home() {
   const latestSermon = sermons[0];
@@ -74,12 +86,17 @@ export default function Home() {
           <div>
             <h2 className="text-3xl font-bold mb-4 text-secondary-700">About Our Church</h2>
             <p className="text-gray-600 mb-4">
+              Philadelphia Church was founded in January 2025 and has been operating independently since 6 April 2025.
+              The church is inspired by the message in Revelation 3:8 and is actively engaged in regular worship
+              services, evangelism, pastoral care, community support, and teaching ministries.
+            </p>
+            <p className="text-gray-600 mb-4">
               Philadelphia Church is a vibrant community of believers empowered by the Spirit to teach, baptize, and
               disciple. We are dedicated to fulfilling the Great Commission by reaching out, transforming lives through
               the Gospel of Jesus Christ.
             </p>
             <p className="text-gray-600 mb-4">
-              Our vision guides us daily—to share God's Word with clarity, welcome believers through baptism, and walk
+              Our vision guides us daily to share God's Word with clarity, welcome believers through baptism, and walk
               alongside others in their spiritual journey. Whether you're new to the faith or a longtime believer, we
               welcome you to join us and discover a place of spiritual growth, genuine friendship, and meaningful service.
             </p>
@@ -160,6 +177,33 @@ export default function Home() {
             <Link to="/contact" className="btn-outline-white">
               Contact Us
             </Link>
+          </div>
+
+          <div className="flex justify-center gap-6 mt-10">
+            <a
+              href="https://www.facebook.com/PhiladelphiaChurchAU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary-200 transition-colors"
+            >
+              <Facebook size={28} />
+            </a>
+            <a
+              href="https://www.instagram.com/philadelphiaau/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary-200 transition-colors"
+            >
+              <Instagram size={28} />
+            </a>
+            <a
+              href="https://www.youtube.com/@PhiladelphiaChurch-AU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary-200 transition-colors"
+            >
+              <Youtube size={28} />
+            </a>
           </div>
         </div>
       </section>

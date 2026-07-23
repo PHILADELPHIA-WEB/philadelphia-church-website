@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -49,15 +49,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Links */}
-        <div className="border-t border-secondary-600 pt-8 flex justify-center space-x-6">
-          <a href="#" className="hover:text-primary-400 transition-colors"><Facebook size={24} /></a>
-          <a href="#" className="hover:text-primary-400 transition-colors"><Twitter size={24} /></a>
-          <a href="#" className="hover:text-primary-400 transition-colors"><Instagram size={24} /></a>
-        </div>
-
         {/* Copyright */}
-        <div className="border-t border-secondary-600 mt-8 pt-8 text-center text-gray-400">
+        <div className="border-t border-secondary-600 pt-8 text-center text-gray-400">
           <p>&copy; {currentYear} Philadelphia Church. All rights reserved.</p>
         </div>
       </div>

@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Church } from 'lucide-react';
+import { Menu, X, Church, Facebook, Instagram, Youtube } from 'lucide-react';
+
+const socialLinks = [
+  { label: 'Facebook', href: 'https://www.facebook.com/PhiladelphiaChurchAU', icon: Facebook },
+  { label: 'Instagram', href: 'https://www.instagram.com/philadelphiaau/', icon: Instagram },
+  { label: 'YouTube', href: 'https://www.youtube.com/@PhiladelphiaChurch-AU', icon: Youtube },
+];
 
 const primaryNavItems = [
   { label: 'Home', href: '/' },
@@ -87,6 +93,21 @@ export default function Header() {
                 </div>
               )}
             </div>
+
+            <div className="flex items-center space-x-3 pl-3 ml-2 border-l">
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="text-gray-700 hover:text-primary-600 transition-colors"
+                >
+                  <Icon size={20} />
+                </a>
+              ))}
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -112,6 +133,20 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            <div className="flex items-center space-x-5 px-3 pt-3 mt-2 border-t">
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="text-gray-700 hover:text-primary-600 transition-colors"
+                >
+                  <Icon size={22} />
+                </a>
+              ))}
+            </div>
           </nav>
         )}
       </div>
