@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import Hero from '@components/Hero/Hero';
 import { Card, Button } from '@components/Common/Common';
+import { sermons } from '@/data/sermons';
 import { MapPin, Video, Users, Baby, BookOpen, HeartHandshake, Gift, Heart } from 'lucide-react';
 
 export default function Home() {
+  const latestSermon = sermons[0];
+
   return (
     <div>
       {/* Hero Section */}
@@ -125,10 +128,10 @@ export default function Home() {
         <h2 className="section-title">Latest News</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card
-            title="Sunday Sermon: God's Grace"
-            description="This week's message focuses on understanding and experiencing God's transformative grace in our daily lives."
-            image="/images/news-1.jpg"
-            cta={{ text: 'Read more', href: '/news' }}
+            title={latestSermon.title}
+            description="Catch up on our latest Sunday message, now available to watch online."
+            image={`https://i.ytimg.com/vi/${latestSermon.videoId}/hqdefault.jpg`}
+            cta={{ text: 'Watch now', href: '/sermons' }}
           />
           <Card
             title="Community Service Day"
