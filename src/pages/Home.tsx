@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
 import Hero from '@components/Hero/Hero';
 import { Card, Button } from '@components/Common/Common';
+import RotatingMediaGallery from '@components/RotatingMediaGallery/RotatingMediaGallery';
 import { sermons } from '@/data/sermons';
 import {
   MapPin,
   Video,
   Users,
-  Baby,
-  BookOpen,
   HeartHandshake,
   Gift,
   Heart,
@@ -43,11 +42,26 @@ export default function Home() {
           From our youngest members to our most seasoned believers, there's a ministry here for every stage of faith.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card icon={<Baby size={32} />} title="Children's Ministry" description="Age-appropriate programs for kids 0-12 during the main service." />
-          <Card icon={<Users size={32} />} title="Youth Group" description="Fun, engaging programs helping teens 13-18 grow in faith and friendship." />
-          <Card icon={<BookOpen size={32} />} title="Bible Studies & Small Groups" description="Weekly gatherings for deeper study, discussion, and fellowship." />
+          <RotatingMediaGallery
+            folder="ChildrensMinistry"
+            title="Children's Ministry"
+            description="Age-appropriate programs for kids 0-12 during the main service."
+            altPrefix="Children's Ministry photo"
+          />
+          <RotatingMediaGallery
+            folder="WomentsMinistry"
+            title="Women's Ministry"
+            description="A community for women to grow together in faith and friendship."
+            altPrefix="Women's Ministry photo"
+          />
+          <RotatingMediaGallery
+            folder="Anniversary"
+            title="Special Meeting"
+            description="We celebrated our first year anniversary together as a church family!"
+            altPrefix="Anniversary celebration photo"
+          />
           <Card icon={<Heart size={32} />} title="Prayer Ministry" description="Dedicated intercessors ready to pray with you and for you." />
-          <Card icon={<HeartHandshake size={32} />} title="Women's Ministry" description="A community for women to grow together in faith and friendship." />
+          <Card icon={<Users size={32} />} title="Youth Group" description="Fun, engaging programs helping teens 13-18 grow in faith and friendship." />
           <Card icon={<Gift size={32} />} title="Volunteering & Serving" description="Use your gifts to serve our church family and wider community." />
         </div>
       </section>
