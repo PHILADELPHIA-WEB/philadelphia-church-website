@@ -5,20 +5,6 @@ import { Card, Button } from '@components/Common/Common';
 
 const JOIN_FORM_URL = 'https://lemon-river-0d241c200.7.azurestaticapps.net/join';
 
-const YES_NO_DEFAULTS = {
-  partOfFamily: '',
-  receivedSalvation: '',
-  immersedBaptism: '',
-  attendedChurchBefore: '',
-};
-
-const YES_NO_QUESTIONS: { name: keyof typeof YES_NO_DEFAULTS; label: string }[] = [
-  { name: 'partOfFamily', label: 'Would you like to be part of the Philadelphia Church family?' },
-  { name: 'receivedSalvation', label: 'Have you received salvation?' },
-  { name: 'immersedBaptism', label: 'Have you been baptized by immersion?' },
-  { name: 'attendedChurchBefore', label: 'Have you attended a church before?' },
-];
-
 export default function JoinUs() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -26,15 +12,17 @@ export default function JoinUs() {
     email: '',
     phone: '',
     interestAreas: [] as string[],
-    ...YES_NO_DEFAULTS,
-    baptismYear: '',
-    churchDetails: '',
     comments: '',
+    consentToContact: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleConsentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, consentToContact: e.target.checked });
   };
 
   const handleCheckbox = (value: string) => {
@@ -66,10 +54,8 @@ export default function JoinUs() {
         email: '',
         phone: '',
         interestAreas: [],
-        ...YES_NO_DEFAULTS,
-        baptismYear: '',
-        churchDetails: '',
         comments: '',
+        consentToContact: false,
       });
     } catch (err) {
       console.error(err);
@@ -160,60 +146,6 @@ export default function JoinUs() {
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
               />
 
-              <div className="space-y-4">
-                {YES_NO_QUESTIONS.map((q) => (
-                  <div key={q.name}>
-                    <label className="block font-semibold text-secondary-700 mb-2">{q.label}</label>
-                    <div className="flex gap-6">
-                      <label className="flex items-center">
-                        <input
-                          type="radio"
-                          name={q.name}
-                          value="yes"
-                          checked={formData[q.name] === 'yes'}
-                          onChange={handleChange}
-                          className="w-4 h-4 text-primary-600"
-                        />
-                        <span className="ml-2 text-gray-700">Yes</span>
-                      </label>
-                      <label className="flex items-center">
-                        <input
-                          type="radio"
-                          name={q.name}
-                          value="no"
-                          checked={formData[q.name] === 'no'}
-                          onChange={handleChange}
-                          className="w-4 h-4 text-primary-600"
-                        />
-                        <span className="ml-2 text-gray-700">No</span>
-                      </label>
-                    </div>
-                  </div>
-                ))}
-
-                {formData.immersedBaptism === 'yes' && (
-                  <input
-                    type="text"
-                    name="baptismYear"
-                    placeholder="What year were you baptized?"
-                    value={formData.baptismYear}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
-                  />
-                )}
-
-                {formData.attendedChurchBefore === 'yes' && (
-                  <input
-                    type="text"
-                    name="churchDetails"
-                    placeholder="Which church did you attend? (name & location)"
-                    value={formData.churchDetails}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
-                  />
-                )}
-              </div>
-
               <div>
                 <label className="block font-semibold text-secondary-700 mb-3">I'm interested in:</label>
                 <div className="space-y-2">
@@ -241,6 +173,19 @@ export default function JoinUs() {
                 rows={4}
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-600"
               />
+
+              <label className="flex items-start space-x-2">
+                <input
+                  type="checkbox"
+                  checked={formData.consentToContact}
+                  onChange={handleConsentChange}
+                  className="w-4 h-4 mt-1 text-primary-600 rounded"
+                  required
+                />
+                <span className="text-sm text-gray-600">
+                  I consent to Philadelphia Church contacting me about my submission via phone, email, or text.
+                </span>
+              </label>
 
               <Button type="submit" fullWidth disabled={isSubmitting}>
                 {isSubmitting ? 'Submitting...' : 'Submit'}
