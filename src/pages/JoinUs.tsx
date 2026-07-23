@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { QRCodeSVG } from 'qrcode.react';
 import Hero from '@components/Hero/Hero';
 import { Card, Button } from '@components/Common/Common';
+
+const JOIN_FORM_URL = 'https://lemon-river-0d241c200.7.azurestaticapps.net/join';
 
 const YES_NO_DEFAULTS = {
   partOfFamily: '',
@@ -109,7 +112,13 @@ export default function JoinUs() {
 
           {/* Right Column - Form */}
           <div className="card">
-            <h2 className="text-2xl font-bold mb-6 text-secondary-700">Let's Connect</h2>
+            <h2 className="text-2xl font-bold mb-4 text-secondary-700">Let's Connect</h2>
+            <div className="flex flex-col items-center mb-6 pb-6 border-b">
+              <QRCodeSVG value={JOIN_FORM_URL} size={140} />
+              <p className="text-sm text-gray-500 mt-3 text-center">
+                Already know someone who wants to join? Scan to open this form on your phone.
+              </p>
+            </div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <input
