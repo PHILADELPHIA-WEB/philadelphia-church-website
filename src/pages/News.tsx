@@ -1,5 +1,4 @@
 import Hero from '@components/Hero/Hero';
-import { Card } from '@components/Common/Common';
 
 export default function News() {
   const newsItems = [
