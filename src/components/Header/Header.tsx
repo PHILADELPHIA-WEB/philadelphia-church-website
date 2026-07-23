@@ -39,7 +39,11 @@ export default function Header() {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/images/logo.png" alt="Philadelphia Church" className="h-12 md:h-14" />
+            <img
+              src="https://philadelphiamedia.blob.core.windows.net/media/images/logo.png"
+              alt="Philadelphia Church"
+              className="h-12 md:h-14"
+            />
             <span className="text-xl md:text-2xl font-bold text-primary-600 hidden sm:inline">
               Philadelphia Church
             </span>

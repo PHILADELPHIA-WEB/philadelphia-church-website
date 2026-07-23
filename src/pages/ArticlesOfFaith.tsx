@@ -30,7 +30,7 @@ export default function ArticlesOfFaith() {
     <div>
       <section className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16 text-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold font-serif mb-4">Articles of Faith</h1>
+          <h1 className="text-4xl md:text-6xl font-bold font-serif mb-4">Philadelphia Declaration</h1>
           <p className="text-lg md:text-2xl text-gray-100 mb-12">What we believe, as revealed in God's Word</p>
 
           <div className="max-w-3xl mx-auto">

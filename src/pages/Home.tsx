@@ -10,7 +10,7 @@ export default function Home() {
       <Hero
         title="Welcome to Philadelphia Church"
         subtitle="Join us every Sunday at 10 AM for worship, prayer, and community fellowship"
-        backgroundVideo="/Videos/Background.mp4"
+        backgroundVideo="https://philadelphiamedia.blob.core.windows.net/media/videos/Background.mp4"
         primaryCTA={{
           text: 'Join Us This Sunday',
           href: '/join',
@@ -84,7 +84,11 @@ export default function Home() {
               Our Mission & Vision
             </Link>
           </div>
-          <img src="/images/about-image.jpg" alt="Church community" className="rounded-lg shadow-lg" />
+          <img
+            src="https://philadelphiamedia.blob.core.windows.net/media/images/about-image.jpg"
+            alt="Church community"
+            className="rounded-lg shadow-lg"
+          />
         </div>
       </section>
 

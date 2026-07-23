@@ -81,7 +81,7 @@ export default function About() {
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col items-center text-center">
             <div className="w-64 md:w-80 rounded-2xl overflow-hidden ring-4 ring-primary-100 shadow-md mb-6">
               <img
-                src="/images/pastors-team.jpg"
+                src="https://philadelphiamedia.blob.core.windows.net/media/images/pastors-team.jpg"
                 alt="Pastor Arun Abraham and Pastor Lovelyn Arun"
                 className="w-full h-auto"
               />
