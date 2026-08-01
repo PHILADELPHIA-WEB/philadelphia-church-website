@@ -6,7 +6,8 @@ interface MediaSlide {
 }
 
 interface RotatingMediaGalleryProps {
-  folder: string;
+  folder?: string;
+  videoSrc?: string;
   title: string;
   description: string;
   altPrefix: string;
@@ -42,15 +43,19 @@ async function listFolderSlides(folder: string): Promise<MediaSlide[]> {
 
 export default function RotatingMediaGallery({
   folder,
+  videoSrc,
   title,
   description,
   altPrefix,
   slideDurationMs = 4000,
 }: RotatingMediaGalleryProps) {
-  const [slides, setSlides] = useState<MediaSlide[]>([]);
+  const [slides, setSlides] = useState<MediaSlide[]>(
+    videoSrc ? [{ type: 'video', src: videoSrc }] : []
+  );
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    if (videoSrc || !folder) return;
     let cancelled = false;
     listFolderSlides(folder)
       .then((result) => {
@@ -60,19 +65,19 @@ export default function RotatingMediaGallery({
     return () => {
       cancelled = true;
     };
-  }, [folder]);
+  }, [folder, videoSrc]);
 
   useEffect(() => {
-    if (slides.length === 0) return;
+    if (videoSrc || slides.length === 0) return;
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
     }, slideDurationMs);
     return () => clearInterval(timer);
-  }, [slides.length, slideDurationMs]);
+  }, [slides.length, slideDurationMs, videoSrc]);
 
   return (
     <div className="card overflow-hidden">
-      <div className="relative w-full h-96 md:h-[32rem] rounded-lg overflow-hidden mb-4 bg-gray-100">
+      <div className="relative w-full h-80 md:h-96 rounded-lg overflow-hidden mb-4 bg-gray-100">
         {slides.map((slide, i) => (
           <div
             key={slide.src}

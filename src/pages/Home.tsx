@@ -41,7 +41,7 @@ export default function Home() {
         <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
           From our youngest members to our most seasoned believers, there's a ministry here for every stage of faith.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <RotatingMediaGallery
             folder="ChildrensMinistry"
             title="Children's Ministry"
@@ -65,6 +65,18 @@ export default function Home() {
             title="Baptism Service"
             description="Celebrating new believers as they are baptized into their faith."
             altPrefix="Baptism Service photo"
+          />
+          <RotatingMediaGallery
+            folder="VBS"
+            title="VBS Celebration 2026"
+            description="Kids had a blast at our Vacation Bible School celebration!"
+            altPrefix="VBS Celebration 2026 photo"
+          />
+          <RotatingMediaGallery
+            videoSrc="https://philadelphiamedia.blob.core.windows.net/media/videos/OneYearVideo.mp4"
+            title="One Year of God's Faithfulness"
+            description="Looking back with gratitude on our first year as a church family."
+            altPrefix="One Year of God's Faithfulness video"
           />
         </div>
       </section>
@@ -168,16 +180,16 @@ export default function Home() {
             cta={{ text: 'Watch now', href: '/sermons' }}
           />
           <Card
-            title="Community Service Day"
-            description="Join us for our monthly community service day where we serve and help those in need in our neighborhood."
-            image="/images/news-2.jpg"
-            cta={{ text: 'Sign up', href: '/events' }}
+            title="Prayer Groups"
+            description="Join one of our prayer groups to seek God together and intercede for our church and community."
+            image="https://philadelphiamedia.blob.core.windows.net/media/Prayer/IMG_5622.png"
+            cta={{ text: 'Learn more', href: '/services' }}
           />
           <Card
-            title="New Small Groups Starting"
-            description="We're launching new small groups for Bible study, prayer, and fellowship. Join today!"
-            image="/images/news-3.jpg"
-            cta={{ text: 'Learn more', href: '/news' }}
+            title="Community Outreach"
+            description="Serving our neighborhood with the love of Christ through outreach and practical care."
+            image="https://philadelphiamedia.blob.core.windows.net/media/Outreach/IMG_5622.png"
+            cta={{ text: 'Learn more', href: '/events' }}
           />
         </div>
       </section>
