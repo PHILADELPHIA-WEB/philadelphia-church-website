@@ -72,7 +72,7 @@ export default function RotatingMediaGallery({
 
   return (
     <div className="card overflow-hidden">
-      <div className="relative w-full h-80 md:h-96 rounded-lg overflow-hidden mb-4 bg-gray-100">
+      <div className="relative w-full h-96 md:h-[32rem] rounded-lg overflow-hidden mb-4 bg-gray-100">
         {slides.map((slide, i) => (
           <div
             key={slide.src}

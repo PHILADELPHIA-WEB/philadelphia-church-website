@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Hero from '@components/Hero/Hero';
 import { Card } from '@components/Common/Common';
 
@@ -47,6 +48,20 @@ export default function About() {
           </ul>
 
           <h2 className="text-3xl font-bold mb-6 mt-8 text-secondary-700">Our Core Values</h2>
+
+          <Link
+            to="/articles-of-faith"
+            className="block bg-gradient-to-r from-primary-600 to-primary-800 text-white rounded-2xl p-8 md:p-10 mb-8 text-center shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold mb-2">Philadelphia Declaration</h3>
+            <p className="text-gray-100 max-w-2xl mx-auto mb-4">
+              Our foundational statement of faith - what we believe, as revealed in God's Word.
+            </p>
+            <span className="inline-block font-semibold underline underline-offset-4">
+              Read our Articles of Faith →
+            </span>
+          </Link>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card
               title="Faith in Jesus"

@@ -40,7 +40,7 @@ export default function Home() {
         <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
           From our youngest members to our most seasoned believers, there's a ministry here for every stage of faith.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <RotatingMediaGallery
             folder="ChildrensMinistry"
             title="Children's Ministry"
