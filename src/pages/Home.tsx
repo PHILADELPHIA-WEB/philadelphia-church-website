@@ -9,7 +9,6 @@ import {
   Users,
   HeartHandshake,
   Gift,
-  Heart,
   Facebook,
   Instagram,
   Youtube,
@@ -41,7 +40,7 @@ export default function Home() {
         <p className="text-gray-600 text-center max-w-2xl mx-auto mb-10">
           From our youngest members to our most seasoned believers, there's a ministry here for every stage of faith.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <RotatingMediaGallery
             folder="ChildrensMinistry"
             title="Children's Ministry"
@@ -60,11 +59,12 @@ export default function Home() {
             description="We celebrated our first year anniversary together as a church family!"
             altPrefix="Anniversary celebration photo"
           />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card icon={<Heart size={32} />} title="Prayer Ministry" description="Dedicated intercessors ready to pray with you and for you." />
-          <Card icon={<Users size={32} />} title="Youth Group" description="Fun, engaging programs helping teens 13-18 grow in faith and friendship." />
-          <Card icon={<Gift size={32} />} title="Volunteering & Serving" description="Use your gifts to serve our church family and wider community." />
+          <RotatingMediaGallery
+            folder="Baptism"
+            title="Baptism Service"
+            description="Celebrating new believers as they are baptized into their faith."
+            altPrefix="Baptism Service photo"
+          />
         </div>
       </section>
 

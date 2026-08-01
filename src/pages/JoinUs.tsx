@@ -149,7 +149,7 @@ export default function JoinUs() {
               <div>
                 <label className="block font-semibold text-secondary-700 mb-3">I'm interested in:</label>
                 <div className="space-y-2">
-                  {['Sunday Worship', 'Small Groups', 'Volunteering', 'Prayer Ministry', 'Youth Group', 'Women\'s Ministry'].map(
+                  {['Sunday Worship', 'Small Groups', 'Baptism Service', 'Women\'s Ministry'].map(
                     (area) => (
                       <label key={area} className="flex items-center">
                         <input
