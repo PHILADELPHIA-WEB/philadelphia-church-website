@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Hero from '@components/Hero/Hero';
 import { Card, Button } from '@components/Common/Common';
 import RotatingMediaGallery from '@components/RotatingMediaGallery/RotatingMediaGallery';
-import { sermons } from '@/data/sermons';
+import { useSermons } from '@hooks/useSermons';
 import {
   MapPin,
   Video,
@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
+  const sermons = useSermons();
   const latestSermon = sermons[0];
 
   return (

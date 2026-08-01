@@ -1,8 +1,11 @@
 import Hero from '@components/Hero/Hero';
 import { Card } from '@components/Common/Common';
-import { sermons, extractServiceDate } from '@/data/sermons';
+import { extractServiceDate } from '@/data/sermons';
+import { useSermons } from '@hooks/useSermons';
 
 export default function Sermons() {
+  const sermons = useSermons();
+
   return (
     <div>
       <Hero title="Sermons & Messages" subtitle="Watch and listen to our latest sermons online" />
